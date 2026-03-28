@@ -3,16 +3,12 @@
 A multiple choice quiz game about space and astronomy, built with Python.
 
 ## Features
-- 4 astronomy questions
+- 6 astronomy questions
+- Random question order every time
 - Multiple choice (a/b/c/d)
 - Score tracking
-- Correct/Wrong feedback
-
-## Questions Cover
-- Black holes
-- The Milky Way galaxy
-- Event horizon
-- Stars and their life cycles
+- Shows correct answer if wrong
+- Success percentage at the end
 
 ## How to Run
 1. Install Python
@@ -25,6 +21,7 @@ A multiple choice quiz game about space and astronomy, built with Python.
 - For loops
 - User input
 - If/else conditions
+- Random module
 
 ## Author
 Mursel | Age 15 | Azerbaijan 🇦🇿
