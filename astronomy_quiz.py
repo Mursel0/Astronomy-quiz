@@ -1,8 +1,9 @@
+import random
 print("If you are an astronomy lover, you are in the right place")
 print("Quiz type: Basic Astronomy")
 print("Quiz has started")
 score = 0
-questions = [ ]
+questions = []
 questions.append({
     "question": "What galaxy do we live in?",
     "a": "Andromeda",
@@ -29,7 +30,7 @@ questions.append({
 })
 questions.append({
     "question": "When a large star collapses under its own weight, what does it become?",
-    "a": " A Black Hole",
+    "a": "A Black Hole",
     "b": "A blue dwarf",
     "c": "A nebula",
     "d": "A red giant",
@@ -44,23 +45,25 @@ questions.append({
     "answer": "b"
 })
 questions.append({
-    "question": "What is the event horizon ?",
+    "question": "What is the event horizon?",
     "a": "The amount of time remaining before the sun dies out",
     "b": "The period of time between sunset and full dark",
     "c": "The amount of time it takes Mercury to transit the sun",
     "d": "The boundary of a black hole at which light can no longer escape",
     "answer": "d"
 })
+random.shuffle(questions)
 for q in questions:
     print(q["question"])
     print("a)", q["a"])
     print("b)", q["b"])
     print("c)", q["c"])
     print("d)", q["d"])
-    guess = input("Enter your answer (a/b/c/d): ")
-    if guess == q["answer"] :
+    guess = input("Enter your answer (a/b/c/d): ").lower().strip()
+    if guess == q["answer"]:
         print("Correct!")
         score += 1
-    else : 
-        print("Wrong!")
-print("Game Over! Your score:" , score)
+    else:
+        print("Wrong! Correct answer is:", q["answer"])
+percentage = (score / len(questions)) * 100
+print("Game Over! Your score:", score, "/", len(questions), "Success percentage:", percentage)
